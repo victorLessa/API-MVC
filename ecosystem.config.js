@@ -1,6 +1,6 @@
 module.exports = {
     apps : [{
-      name: "app",
+      name: "./app",
       script: "./serve.js",
       instances: "max",
       env: {
