@@ -1,15 +1,15 @@
 const { User, Address } = require('../model/index');
 const { sequelize } = require('../model/index')
-module.exports = {
+class UserController {
   async index(req, res) {
     const users = await User.findAll();
-
+  
     return res.json(users);
-  },
-
+  }
+  
   async store(req, res) {
-    const { name, email } = req.body;
-
+    const { name, email, zipcode, street, number } = req.body;
+  
     const user = await sequelize.transaction().then(t => {
       return User.create(
         {
@@ -22,9 +22,9 @@ module.exports = {
           return Address.create(
             {
               user_id: user.dataValues.id,
-              zipcode: "123456",
-              street: "Alfredo Backer",
-              number: 536
+              zipcode: zipcode,
+              street: street,
+              number: number
             },
             { transaction: t }
           );
@@ -44,4 +44,6 @@ module.exports = {
     });
     return res.json(user);
   }
-};
+
+}
+module.exports = new UserController()

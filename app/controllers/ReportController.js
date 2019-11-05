@@ -1,5 +1,5 @@
 const { Op } = require('sequelize');
-const User = require('../model/User');
+const { User } = require('../model/index');
 
 module.exports = {
   async show(req, res) {

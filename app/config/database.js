@@ -5,6 +5,7 @@ module.exports = {
     username: "zalgovvb",
     password: "Hzy1d3GUnduNAPSarK1Fn91RF10a14Lo",
     database: "zalgovvb",
+    logging: false,
     define: {
       timestamps: true, // toda tabela deve conter um created_at e um updated_at
       underscored: true // usa o formato snake_case

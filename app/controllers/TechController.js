@@ -1,5 +1,4 @@
-const User = require('../model/User');
-const Tech = require('../model/Tech');
+const { User, Tech } = require('../model/index');
 
 module.exports = {
   async index(req, res) {
