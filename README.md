@@ -25,5 +25,14 @@ yarn dev
 yarn test
 ```
 
-:open_file_folder:
+## :open_file_folder: Dependences
+
+- cors
+- express
+- mocha
+- pg
+- sequelize
+- chai
+- chai-http
+- nodemon
 
