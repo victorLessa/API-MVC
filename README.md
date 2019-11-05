@@ -25,7 +25,7 @@ yarn dev
 yarn test
 ```
 
-## :open_file_folder: Dependences
+## :open_file_folder: Dependencies
 
 - cors
 - express
