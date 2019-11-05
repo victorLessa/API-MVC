@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node app/serve.js",
     "dev": "nodemon --legacy-watch app/serve.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "yarn sequelize db:migrate",
+    "test": "mocha --exit",
+    "posttest": "yarn sequelize db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +16,15 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mocha": "^6.2.2",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
     "pm2": "^4.1.2",
     "sequelize": "^5.21.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "nodemon": "^1.18.2",
     "sequelize-cli": "^5.5.1"
   }
