@@ -8,8 +8,9 @@ const ReportController = require('../controllers/ReportController');
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
-    return res.json('Hello World')
+    return res.json('FOiiii')
 })
+
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 
