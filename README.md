@@ -1,6 +1,7 @@
 # API-MVC
 
-I recommend using yarn for this application.
+This application was developed using the MVC design standard.
+OBS: I recommend using yarn for this application.
 
 ## Run
 
@@ -23,4 +24,6 @@ yarn dev
 ```powershell
 yarn test
 ```
+
+:open_file_folder:
 
